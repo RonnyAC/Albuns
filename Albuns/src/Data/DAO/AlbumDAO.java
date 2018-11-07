@@ -14,20 +14,52 @@ import java.util.ArrayList;
  * @author usd - 0013
  */
 public class AlbumDAO {
-    
-    public void Salvar(Album album){
-        if(Data.listaDeAlbuns == null){
-            Data.listaDeAlbuns = new ArrayList<>();
+
+    public void Salvar(Album album) {
+        try {
+            if (Data.listaDeAlbuns == null) {
+                Data.listaDeAlbuns = new ArrayList<>();
+                album.setId(1);
+                Data.listaDeAlbuns.add(album);
+            }
+
+            album.setId(Data.listaDeAlbuns.get(Data.listaDeAlbuns.size() - 1).getId() + 1);
+        } catch (Exception e) {
+            throw e;
         }
-        
-        Data.listaDeAlbuns.add(album);
+
     }
-    
-    public void Editar(Album album){
-        
+
+    public void Editar(Album album, Integer id) throws Exception {
+        try {
+            if (Data.listaDeAlbuns == null || Data.listaDeAlbuns.isEmpty()) {
+                throw new Exception("Não existem dados a serem alterados");
+            }
+            for (Album item : Data.listaDeAlbuns) {
+                if (item.getId().equals(id)) {
+                    Data.listaDeAlbuns.add(Data.listaDeAlbuns.indexOf(item), album);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
-    
-    public void Excluir(Integer id){
-        
+
+    public void Excluir(Integer id) throws Exception {
+        try {
+            if (Data.listaDeAlbuns == null || Data.listaDeAlbuns.isEmpty()) {
+                throw new Exception("Não existem dados a serem alterados");
+            }
+            for (Album item : Data.listaDeAlbuns) {
+                if (item.getId().equals(id)) {
+                    Data.listaDeAlbuns.remove(Data.listaDeAlbuns.indexOf(item));
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }
