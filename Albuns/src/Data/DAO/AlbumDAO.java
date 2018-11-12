@@ -24,6 +24,7 @@ public class AlbumDAO {
             }
 
             album.setId(Data.listaDeAlbuns.get(Data.listaDeAlbuns.size() - 1).getId() + 1);
+            Data.listaDeAlbuns.add(album);
         } catch (Exception e) {
             throw e;
         }
