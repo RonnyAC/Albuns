@@ -6,7 +6,7 @@
 package Data.DAO;
 
 import Data.Dados.Data;
-import Domain.FigurinhasNaoAlocadas;
+import Domain.Entity.FigurinhasNaoAlocadas;
 import java.util.ArrayList;
 
 /**

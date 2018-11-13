@@ -5,7 +5,7 @@
  */
 package Data.DAO;
 
-import Domain.Album;
+import Domain.Entity.Album;
 import Data.Dados.Data;
 import java.util.ArrayList;
 

@@ -1,11 +1,11 @@
-package Domain;
+package Domain.Entity;
 
 /**
  *
  * @author Ronny
  */
 public class Album {
-    private Integer id;
+    private  Integer id;
     private String titulo;
     private String descricao;
     private Integer numeroDeFigurinhas;

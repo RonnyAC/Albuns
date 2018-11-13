@@ -6,7 +6,7 @@
 package Data.DAO;
 
 import Data.Dados.Data;
-import Domain.Figurinha;
+import Domain.Entity.Figurinha;
 import java.util.ArrayList;
 
 /**

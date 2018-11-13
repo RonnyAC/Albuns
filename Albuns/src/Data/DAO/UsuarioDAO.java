@@ -6,7 +6,7 @@
 package Data.DAO;
 
 import Data.Dados.Data;
-import Domain.Usuario;
+import Domain.Entity.Usuario;
 import java.util.ArrayList;
 
 /**

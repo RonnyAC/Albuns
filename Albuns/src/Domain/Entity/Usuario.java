@@ -1,4 +1,4 @@
-package Domain;
+package Domain.Entity;
 
 import java.util.List;
 

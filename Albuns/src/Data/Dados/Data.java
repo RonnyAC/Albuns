@@ -5,11 +5,11 @@
  */
 package Data.Dados;
 
-import Domain.Album;
-import Domain.Colecao;
-import Domain.Figurinha;
-import Domain.FigurinhasNaoAlocadas;
-import Domain.Usuario;
+import Domain.Entity.Album;
+import Domain.Entity.Colecao;
+import Domain.Entity.Figurinha;
+import Domain.Entity.FigurinhasNaoAlocadas;
+import Domain.Entity.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 

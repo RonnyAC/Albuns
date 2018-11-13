@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Domain;
+package Domain.Entity;
 
 import java.util.List;
 
@@ -11,12 +6,14 @@ import java.util.List;
  *
  * @author Ronny
  */
-public class FigurinhasNaoAlocadas {
+public class Colecao {
     private Integer id;
+    private String titulo;
+    private Float porcentagemConcluido;
     private Album album;
     private List<Figurinha> figurinhas;
 
-    public FigurinhasNaoAlocadas() {
+    public Colecao() {
     }
 
     public Integer getId() {
@@ -25,6 +22,22 @@ public class FigurinhasNaoAlocadas {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Float getPorcentagemConcluido() {
+        return porcentagemConcluido;
+    }
+
+    public void setPorcentagemConcluido(Float porcentagemConcluido) {
+        this.porcentagemConcluido = porcentagemConcluido;
     }
 
     public Album getAlbum() {
