@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Interface/Repository/IRepositoryUsuario.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Start/Testes.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Entity/Album.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Start/Start.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Usuario/AdicionarUsuarioResponse.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Entity/Usuario.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Usuario/AutenticarUsuarioRequest.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Album/AdicionarAlbumResponse.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Album/AutenticarAlbumRequest.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Service/ServiceUsuario.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Album/AutenticarAlbumResponse.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Usuario/AutenticarUsuarioResponse.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Argument/Usuario/AdicionarUsuarioRequest.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Interface/Service/IServiceAlbum.java</file>
+            <file>file:/C:/Users/Ronny/Documents/albuns-uds/albuns-uds/Albuns/src/Domain/Interface/Service/IServiceUsuario.java</file>
+        </group>
+    </open-files>
+</project-private>
