@@ -13,7 +13,6 @@ import Domain.Argument.Usuario.AutenticarUsuarioResponse;
 import Domain.Entity.Usuario;
 import Domain.Interface.Repository.IRepositoryUsuario;
 import Domain.Interface.Service.IServiceUsuario;
-import java.util.ArrayList;
 
 /**
  *
@@ -46,9 +45,7 @@ public class ServiceUsuario implements IServiceUsuario {
     public AdicionarUsuarioResponse AdicionarUsusario(AdicionarUsuarioRequest request) {
         try {
             var usuario = new Usuario(request.getNome(), request.getEmail(), request.getSenha());
-            usuario.setColecoes(new ArrayList<>());
-            usuario.setFigurinhasNaoAlocadas(new ArrayList<>());
-
+            
             return repositoryUsuario.AdicionarUsusario(usuario);
         } catch (Exception e) {
             System.err.println(e + "Toma no cu");

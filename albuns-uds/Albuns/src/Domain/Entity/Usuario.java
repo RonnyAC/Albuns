@@ -12,7 +12,6 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
-    private List<FigurinhasNaoAlocadas> figurinhasNaoAlocadas;
     private List<Colecao> colecoes;
 
     public Usuario(String nome, String email, String senha) {
@@ -55,14 +54,6 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public List<FigurinhasNaoAlocadas> getFigurinhasNaoAlocadas() {
-        return figurinhasNaoAlocadas;
-    }
-
-    public void setFigurinhasNaoAlocadas(List<FigurinhasNaoAlocadas> figurinhasNaoAlocadas) {
-        this.figurinhasNaoAlocadas = figurinhasNaoAlocadas;
     }
 
     public List<Colecao> getColecoes() {

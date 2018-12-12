@@ -34,12 +34,11 @@ public class ServiceAlbum implements IServiceAlbum {
     @Override
     public AdicionarAlbumResponse AdicionarAlbum(AdicionarAlbumRequest request) {
         try {
-            var album = new Album(request.getTitulo(), request.getDescricao(), request.getNumeroDeFigurinhas());
+            var album = new Album(request.getTitulo(), request.getDescricao());
             return repositoryAlbum.AdicionarAlbum(album);
         } catch (Exception e) {
             System.err.println(e);
             return null;
         }
     }
-
 }

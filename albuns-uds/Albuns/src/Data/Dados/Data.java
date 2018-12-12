@@ -6,6 +6,7 @@
 package Data.Dados;
 
 import Domain.Entity.Album;
+import Domain.Entity.AlbumOriginal;
 import Domain.Entity.Colecao;
 import Domain.Entity.Figurinha;
 import Domain.Entity.FigurinhasNaoAlocadas;
@@ -22,4 +23,5 @@ public class Data {
     public static List<Colecao> listaDeColecoes;
     public static List<FigurinhasNaoAlocadas> listaDeFigurinahsNaoAlocadas;
     public static List<Usuario> listaDeUsuarios;
+    public static List<AlbumOriginal> listaDeAlbunsOriginais;
 }

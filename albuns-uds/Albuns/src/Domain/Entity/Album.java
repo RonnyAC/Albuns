@@ -1,5 +1,7 @@
 package Domain.Entity;
 
+import java.util.List;
+
 /**
  *
  * @author Ronny
@@ -9,16 +11,20 @@ public class Album {
     private Integer id;
     private String titulo;
     private String descricao;
-    private Integer numeroDeFigurinhas;
+    private List<Figurinha> figurinha;
 
     public Album(String titulo, String descricao, Integer numeroDeFigurinhas) {
         this.titulo = titulo;
         this.descricao = descricao;
-        this.numeroDeFigurinhas = numeroDeFigurinhas;
     }
 
     public Album() {
 
+    }
+
+    public Album(String titulo, String descricao) {
+        this.descricao = descricao;
+        this.titulo = titulo;
     }
 
     public Integer getId() {
@@ -45,12 +51,12 @@ public class Album {
         this.descricao = descricao;
     }
 
-    public Integer getNumeroDeFigurinhas() {
-        return numeroDeFigurinhas;
+    public List<Figurinha> getFigurinha() {
+        return figurinha;
     }
 
-    public void setNumeroDeFigurinhas(Integer numeroDeFigurinhas) {
-        this.numeroDeFigurinhas = numeroDeFigurinhas;
+    public void setFigurinha(List<Figurinha> figurinha) {
+        this.figurinha = figurinha;
     }
 
 }

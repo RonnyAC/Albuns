@@ -3,27 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Domain.Argument.Album;
-
-import Domain.Entity.Figurinha;
-import java.util.List;
+package Domain.Argument.AlbumOriginal;
 
 /**
  *
  * @author Ronny
  */
-public class AdicionarAlbumRequest {
-
+public class AdicionarAlbumOriginalRequest {
     private String titulo;
     private String descricao;
-    private List<Figurinha> figurinhas;
+    private Integer numeroDeFigurinhas;
 
-    public AdicionarAlbumRequest(String titulo, String descricao) {
+    public AdicionarAlbumOriginalRequest(String titulo, String descricao, Integer numeroDeFigurinhas) {
         this.titulo = titulo;
         this.descricao = descricao;
+        this.numeroDeFigurinhas = numeroDeFigurinhas;
     }
-    
-    public AdicionarAlbumRequest() {
+
+    public AdicionarAlbumOriginalRequest() {
     }
 
     public String getTitulo() {
@@ -40,14 +37,13 @@ public class AdicionarAlbumRequest {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }   
-
-    public List<Figurinha> getFigurinhas() {
-        return figurinhas;
     }
 
-    public void setFigurinhas(List<Figurinha> figurinhas) {
-        this.figurinhas = figurinhas;
+    public Integer getNumeroDeFigurinhas() {
+        return numeroDeFigurinhas;
     }
-    
+
+    public void setNumeroDeFigurinhas(Integer numeroDeFigurinhas) {
+        this.numeroDeFigurinhas = numeroDeFigurinhas;
+    }
 }

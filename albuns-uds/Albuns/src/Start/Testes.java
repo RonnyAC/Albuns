@@ -6,7 +6,11 @@
 package Start;
 
 import Data.Dados.Data;
+import Domain.Argument.Album.AdicionarAlbumRequest;
+import Domain.Argument.AlbumOriginal.AdicionarAlbumOriginalRequest;
 import Domain.Argument.Usuario.AdicionarUsuarioRequest;
+import Domain.Service.ServiceAlbum;
+import Domain.Service.ServiceAlbumOriginal;
 import Domain.Service.ServiceUsuario;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -18,38 +22,28 @@ import java.util.Scanner;
 public class Testes {
 
     public static void main(String args[]) {
-        System.out.println("Iniciando Data...");
-        
-        Data.listaDeAlbuns = new ArrayList<>();
-        System.out.println("Lista de albuns criado!");
-        
-        Data.listaDeUsuarios = new ArrayList<>();
-        System.out.println("Lista de usuarios criado!");
-        
-        Data.listaDeColecoes = new ArrayList<>();
-        System.out.println("Lista de coleçoes criado!");
-        
-        Data.listaDeFigurinahsNaoAlocadas = new ArrayList<>();
-        System.out.println("Lista de figurinhas nao alocadas criado!");
-        
-        Data.listaDeFigurinhas = new ArrayList<>();
-        System.out.println("Lista de Figurinhas criado!");
-
+        InicializarDados();
         var leitura = new Scanner(System.in);
         System.out.println("Iniciando o sistema...");
 
-        var service = new ServiceUsuario();
+        var usuarioService = new ServiceUsuario();
         System.out.println("Serviço criado");
 
-        AdicionarUsuario(service);
-        AdicionarUsuario(service);
+        var albumService = new ServiceAlbum();
+        System.out.println("Serviço criado");
+
+        var albumOriginalService = new ServiceAlbumOriginal();
+        System.out.println("Serviço criado");
+
+        AdicionarUsuario(usuarioService);
+        AdicionarAlbumOriginal(albumOriginalService);
+        AdicionarAlbum(albumService);
 
         Data.listaDeUsuarios.forEach((t) -> {
             System.out.println(t.getNome() + "-" + t.getId());
         });
 
         leitura.next();
-
     }
 
     private static void metodoUm() {
@@ -102,7 +96,7 @@ public class Testes {
 
     private static void AdicionarUsuario(ServiceUsuario service) {
         var request = new AdicionarUsuarioRequest();
-        System.out.println("Objeto criado");
+        System.out.println("Usuario criado");
 
         request.setNome("Nome de Teste");
         request.setEmail("EmailTeste@teste.com.br");
@@ -110,5 +104,51 @@ public class Testes {
 
         var response = service.AdicionarUsusario(request);
         System.out.println(response.getMensagem());
+    }
+
+    private static void AdicionarAlbum(ServiceAlbum service) {
+        var request = new AdicionarAlbumRequest();
+        System.out.println("Album criado");
+
+        request.setDescricao("Primeiro Album de teste criado");
+        request.setTitulo("Album de Teste");
+        request.setFigurinhas(new ArrayList<>(Data.listaDeAlbunsOriginais.get(0).getNumeroDeFigurinhas()));
+
+        var response = service.AdicionarAlbum(request);
+        System.out.println(response.getMensagem());
+    }
+
+    private static void AdicionarAlbumOriginal(ServiceAlbumOriginal service) {
+        var request = new AdicionarAlbumOriginalRequest();
+        System.out.println("AlbumOriginal criado");
+
+        request.setDescricao("Primeiro Original de teste criado");
+        request.setTitulo("AlbumOriginal de Teste");
+        request.setNumeroDeFigurinhas(100);
+
+        var response = service.AdicionarAlbumOriginal(request);
+        System.out.println(response.getMensagem());
+    }
+
+    private static void InicializarDados() {
+        System.out.println("Iniciando Data...");
+
+        Data.listaDeAlbuns = new ArrayList<>();
+        System.out.println("Lista de albuns criado!");
+
+        Data.listaDeAlbunsOriginais = new ArrayList<>();
+        System.out.println("Lista de albuns originais criado!");
+
+        Data.listaDeUsuarios = new ArrayList<>();
+        System.out.println("Lista de usuarios criado!");
+
+        Data.listaDeColecoes = new ArrayList<>();
+        System.out.println("Lista de coleçoes criado!");
+
+        Data.listaDeFigurinahsNaoAlocadas = new ArrayList<>();
+        System.out.println("Lista de figurinhas nao alocadas criado!");
+
+        Data.listaDeFigurinhas = new ArrayList<>();
+        System.out.println("Lista de Figurinhas criado!");
     }
 }

@@ -9,9 +9,10 @@ import java.util.List;
 public class Colecao {
     private Integer id;
     private String titulo;
+    private String senha;
     private Float porcentagemConcluido;
     private Album album;
-    private List<Figurinha> figurinhas;
+    private List<FigurinhasNaoAlocadas> figurinhasNaoAlocadas;
 
     public Colecao() {
     }
@@ -48,12 +49,20 @@ public class Colecao {
         this.album = album;
     }
 
-    public List<Figurinha> getFigurinhas() {
-        return figurinhas;
+    public List<FigurinhasNaoAlocadas> getFigurinhas() {
+        return figurinhasNaoAlocadas;
     }
 
-    public void setFigurinhas(List<Figurinha> figurinhas) {
-        this.figurinhas = figurinhas;
+    public void setFigurinhas(List<FigurinhasNaoAlocadas> figurinhas) {
+        this.figurinhasNaoAlocadas = figurinhas;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     
     
