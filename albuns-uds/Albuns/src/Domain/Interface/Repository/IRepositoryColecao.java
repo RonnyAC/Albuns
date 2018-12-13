@@ -5,13 +5,13 @@
  */
 package Domain.Interface.Repository;
 
-import Domain.Argument.Figurinha.AdicionarFigurinhaResponse;
-import Domain.Entity.Figurinha;
+import Domain.Argument.Colecao.AdicionarColecaoResponse;
+import Domain.Entity.Colecao;
 
 /**
  *
  * @author Ronny
  */
-public interface IRepositoryFigurinha {
-    AdicionarFigurinhaResponse AdicionarFigurinha(Figurinha figurinha);
+public interface IRepositoryColecao {
+    AdicionarColecaoResponse AdicionarColecao(Colecao colecao);
 }

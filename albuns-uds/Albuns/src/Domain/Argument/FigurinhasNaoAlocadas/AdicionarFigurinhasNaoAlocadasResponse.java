@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Domain.Argument.AlbumOriginal;
+package Domain.Argument.FigurinhasNaoAlocadas;
+
+import Domain.Argument.Figurinha.*;
 
 /**
  *
  * @author Ronny
  */
-public class AdicionarAlbumOriginalResponse {
+public class AdicionarFigurinhasNaoAlocadasResponse {
 
     private int id;
     private String mensagem;
 
-    public AdicionarAlbumOriginalResponse(int id, String mensagem) {
+    public AdicionarFigurinhasNaoAlocadasResponse(int id, String mensagem) {
         this.id = id;
         this.mensagem = mensagem;
     }

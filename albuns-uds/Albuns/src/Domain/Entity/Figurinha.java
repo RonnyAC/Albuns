@@ -9,7 +9,14 @@ public class Figurinha {
     private Integer numero;
     private String nome;
     private String descricao;
-    private Album album;
+    private AlbumOriginal albumOriginal;
+
+    public Figurinha(Integer numero, String nome, String descricao, AlbumOriginal albumOriginal) {
+        this.numero = numero;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.albumOriginal = albumOriginal;
+    }
 
     public Figurinha() {
     }
@@ -46,12 +53,12 @@ public class Figurinha {
         this.descricao = descricao;
     }
 
-    public Album getAlbum() {
-        return album;
+    public AlbumOriginal getAlbum() {
+        return albumOriginal;
     }
 
-    public void setAlbum(Album album) {
-        this.album = album;
+    public void setAlbum(AlbumOriginal albumOriginal) {
+        this.albumOriginal = albumOriginal;
     }
     
     

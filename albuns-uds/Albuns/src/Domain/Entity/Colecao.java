@@ -11,10 +11,15 @@ public class Colecao {
     private String titulo;
     private String senha;
     private Float porcentagemConcluido;
-    private Album album;
+    private List<Album> albuns;
     private List<FigurinhasNaoAlocadas> figurinhasNaoAlocadas;
 
     public Colecao() {
+    }
+
+    public Colecao(String titulo, String senha) {
+        this.titulo = titulo;
+        this.senha = senha;
     }
 
     public Integer getId() {
@@ -41,20 +46,20 @@ public class Colecao {
         this.porcentagemConcluido = porcentagemConcluido;
     }
 
-    public Album getAlbum() {
-        return album;
+    public List<Album> getAlbuns() {
+        return albuns;
     }
 
-    public void setAlbum(Album album) {
-        this.album = album;
+    public void setAlbuns(List<Album> albuns) {
+        this.albuns = albuns;
     }
 
-    public List<FigurinhasNaoAlocadas> getFigurinhas() {
+    public List<FigurinhasNaoAlocadas> getFigurinhasNaoAlocadas() {
         return figurinhasNaoAlocadas;
     }
 
-    public void setFigurinhas(List<FigurinhasNaoAlocadas> figurinhas) {
-        this.figurinhasNaoAlocadas = figurinhas;
+    public void setFigurinhasNaoAlocadas(List<FigurinhasNaoAlocadas> figurinhasNaoAlocadas) {
+        this.figurinhasNaoAlocadas = figurinhasNaoAlocadas;
     }
 
     public String getSenha() {

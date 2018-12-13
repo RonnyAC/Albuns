@@ -16,6 +16,11 @@ public class FigurinhasNaoAlocadas {
     private Album album;
     private List<Figurinha> figurinhas;
 
+    public FigurinhasNaoAlocadas(Album album) {
+        this.album = album;
+    }
+
+    
     public FigurinhasNaoAlocadas() {
     }
 

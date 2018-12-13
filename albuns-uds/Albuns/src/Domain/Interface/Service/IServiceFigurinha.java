@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Domain.Interface.Repository;
+package Domain.Interface.Service;
 
+import Domain.Argument.Figurinha.AdicionarFigurinhaRequest;
 import Domain.Argument.Figurinha.AdicionarFigurinhaResponse;
-import Domain.Entity.Figurinha;
 
 /**
  *
  * @author Ronny
  */
-public interface IRepositoryFigurinha {
-    AdicionarFigurinhaResponse AdicionarFigurinha(Figurinha figurinha);
+public interface IServiceFigurinha {
+    AdicionarFigurinhaResponse AdicionarAlbumOriginal(AdicionarFigurinhaRequest request);
 }
