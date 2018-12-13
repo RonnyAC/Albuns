@@ -8,8 +8,6 @@ package Domain.Service;
 import Data.Repository.UsuarioRepository;
 import Domain.Argument.Usuario.AdicionarUsuarioRequest;
 import Domain.Argument.Usuario.AdicionarUsuarioResponse;
-import Domain.Argument.Usuario.AutenticarUsuarioRequest;
-import Domain.Argument.Usuario.AutenticarUsuarioResponse;
 import Domain.Entity.Usuario;
 import Domain.Interface.Repository.IRepositoryUsuario;
 import Domain.Interface.Service.IServiceUsuario;
@@ -24,21 +22,6 @@ public class ServiceUsuario implements IServiceUsuario {
 
     public ServiceUsuario() {
         repositoryUsuario = new UsuarioRepository();
-    }
-
-    @Override
-    public AutenticarUsuarioResponse AutenticarUsuario(AutenticarUsuarioRequest request) {
-
-        try {
-            if (request == null) {
-                throw new Exception("Erro encontrado");
-            }
-
-            return repositoryUsuario.AutenticarUsuario(request);
-        } catch (Exception e) {
-            System.err.println(e.getCause());
-            return null;
-        }
     }
 
     @Override

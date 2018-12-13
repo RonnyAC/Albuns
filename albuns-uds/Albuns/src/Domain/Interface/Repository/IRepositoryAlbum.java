@@ -6,6 +6,8 @@
 package Domain.Interface.Repository;
 
 import Domain.Argument.Album.AdicionarAlbumResponse;
+import Domain.Argument.Album.AlbumResponse;
+import Domain.Argument.Album.EditarAlbumResponse;
 import Domain.Entity.Album;
 
 /**
@@ -14,4 +16,10 @@ import Domain.Entity.Album;
  */
 public interface IRepositoryAlbum {
     AdicionarAlbumResponse AdicionarAlbum(Album album);
+    
+    EditarAlbumResponse EditarAlbum(Album album, int id);
+    
+    void RemoverAlbum(int id);
+    
+    AlbumResponse GetById(int id);
 }

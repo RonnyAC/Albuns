@@ -7,14 +7,11 @@ package Domain.Interface.Service;
 
 import Domain.Argument.Usuario.AdicionarUsuarioRequest;
 import Domain.Argument.Usuario.AdicionarUsuarioResponse;
-import Domain.Argument.Usuario.AutenticarUsuarioRequest;
-import Domain.Argument.Usuario.AutenticarUsuarioResponse;
 
 /**
  *
  * @author usd - 0013
  */
 public interface IServiceUsuario {
-    AutenticarUsuarioResponse AutenticarUsuario(AutenticarUsuarioRequest request);
     AdicionarUsuarioResponse AdicionarUsusario(AdicionarUsuarioRequest request);
 }

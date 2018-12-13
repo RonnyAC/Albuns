@@ -6,6 +6,8 @@
 package Domain.Interface.Repository;
 
 import Domain.Argument.Colecao.AdicionarColecaoResponse;
+import Domain.Argument.Colecao.ColecaoResponse;
+import Domain.Argument.Colecao.EditarColecaoResponse;
 import Domain.Entity.Colecao;
 
 /**
@@ -13,5 +15,12 @@ import Domain.Entity.Colecao;
  * @author Ronny
  */
 public interface IRepositoryColecao {
+
     AdicionarColecaoResponse AdicionarColecao(Colecao colecao);
+
+    EditarColecaoResponse EditarAlbum(Colecao colecao, int id);
+
+    void RemoverAlbum(int id);
+
+    ColecaoResponse GetById(int id);
 }

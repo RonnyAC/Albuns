@@ -7,16 +7,12 @@ package Domain.Interface.Service;
 
 import Domain.Argument.Album.AdicionarAlbumRequest;
 import Domain.Argument.Album.AdicionarAlbumResponse;
-import Domain.Argument.Album.AutenticarAlbumRequest;
-import Domain.Argument.Album.AutenticarAlbumResponse;
 
 /**
  *
  * @author Ronny
  */
 public interface IServiceAlbum {
-
-    AutenticarAlbumResponse AutenticarAlbum(AutenticarAlbumRequest request);
 
     AdicionarAlbumResponse AdicionarAlbum(AdicionarAlbumRequest request);
 }

@@ -6,6 +6,8 @@
 package Domain.Interface.Repository;
 
 import Domain.Argument.Figurinha.AdicionarFigurinhaResponse;
+import Domain.Argument.Figurinha.EditarFigurinhaResponse;
+import Domain.Argument.Figurinha.FigurinhaResponse;
 import Domain.Entity.Figurinha;
 
 /**
@@ -13,5 +15,12 @@ import Domain.Entity.Figurinha;
  * @author Ronny
  */
 public interface IRepositoryFigurinha {
+
     AdicionarFigurinhaResponse AdicionarFigurinha(Figurinha figurinha);
+
+    EditarFigurinhaResponse EditarAlbum(Figurinha figurinha, int id);
+
+    void RemoverAlbum(int id);
+
+    FigurinhaResponse GetById(int id);
 }

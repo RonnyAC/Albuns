@@ -6,8 +6,8 @@
 package Domain.Interface.Repository;
 
 import Domain.Argument.Usuario.AdicionarUsuarioResponse;
-import Domain.Argument.Usuario.AutenticarUsuarioRequest;
-import Domain.Argument.Usuario.AutenticarUsuarioResponse;
+import Domain.Argument.Usuario.EditarUsuarioResponse;
+import Domain.Argument.Usuario.UsuarioResponse;
 import Domain.Entity.Usuario;
 
 /**
@@ -16,7 +16,11 @@ import Domain.Entity.Usuario;
  */
 public interface IRepositoryUsuario {
 
-    AutenticarUsuarioResponse AutenticarUsuario(AutenticarUsuarioRequest request);
-
     AdicionarUsuarioResponse AdicionarUsusario(Usuario usuario);
+
+    EditarUsuarioResponse EditarAlbum(Usuario usuario, int id);
+
+    void RemoverAlbum(int id);
+
+    UsuarioResponse GetById(int id);
 }

@@ -8,8 +8,6 @@ package Domain.Service;
 import Data.Repository.AlbumRepository;
 import Domain.Argument.Album.AdicionarAlbumRequest;
 import Domain.Argument.Album.AdicionarAlbumResponse;
-import Domain.Argument.Album.AutenticarAlbumRequest;
-import Domain.Argument.Album.AutenticarAlbumResponse;
 import Domain.Entity.Album;
 import Domain.Interface.Repository.IRepositoryAlbum;
 import Domain.Interface.Service.IServiceAlbum;
@@ -24,11 +22,6 @@ public class ServiceAlbum implements IServiceAlbum {
 
     public ServiceAlbum() {
         repositoryAlbum = new AlbumRepository();
-    }
-
-    @Override
-    public AutenticarAlbumResponse AutenticarAlbum(AutenticarAlbumRequest request) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
