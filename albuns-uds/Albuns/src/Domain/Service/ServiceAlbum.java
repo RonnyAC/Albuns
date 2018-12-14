@@ -8,9 +8,13 @@ package Domain.Service;
 import Data.Repository.AlbumRepository;
 import Domain.Argument.Album.AdicionarAlbumRequest;
 import Domain.Argument.Album.AdicionarAlbumResponse;
+import Domain.Argument.Album.AlbumResponse;
+import Domain.Argument.Album.EditarAlbumRequest;
+import Domain.Argument.Album.EditarAlbumResponse;
 import Domain.Entity.Album;
 import Domain.Interface.Repository.IRepositoryAlbum;
 import Domain.Interface.Service.IServiceAlbum;
+import java.util.List;
 
 /**
  *
@@ -25,7 +29,7 @@ public class ServiceAlbum implements IServiceAlbum {
     }
 
     @Override
-    public AdicionarAlbumResponse AdicionarAlbum(AdicionarAlbumRequest request) {
+    public AdicionarAlbumResponse Adicionar(AdicionarAlbumRequest request) {
         try {
             var album = new Album(request.getTitulo(), request.getDescricao());
             return repositoryAlbum.AdicionarAlbum(album);
@@ -33,5 +37,25 @@ public class ServiceAlbum implements IServiceAlbum {
             System.err.println(e);
             return null;
         }
+    }
+
+    @Override
+    public EditarAlbumResponse Editar(EditarAlbumRequest request, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Remover(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public AlbumResponse GetById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<AlbumResponse> Listar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

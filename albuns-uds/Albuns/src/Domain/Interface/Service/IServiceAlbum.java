@@ -7,6 +7,10 @@ package Domain.Interface.Service;
 
 import Domain.Argument.Album.AdicionarAlbumRequest;
 import Domain.Argument.Album.AdicionarAlbumResponse;
+import Domain.Argument.Album.AlbumResponse;
+import Domain.Argument.Album.EditarAlbumRequest;
+import Domain.Argument.Album.EditarAlbumResponse;
+import java.util.List;
 
 /**
  *
@@ -14,5 +18,13 @@ import Domain.Argument.Album.AdicionarAlbumResponse;
  */
 public interface IServiceAlbum {
 
-    AdicionarAlbumResponse AdicionarAlbum(AdicionarAlbumRequest request);
+    AdicionarAlbumResponse Adicionar(AdicionarAlbumRequest request);
+
+    EditarAlbumResponse Editar(EditarAlbumRequest request, int id);
+
+    void Remover(int id);
+
+    AlbumResponse GetById(int id);
+    
+    List<AlbumResponse> Listar();
 }

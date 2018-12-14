@@ -102,11 +102,11 @@ public class Testes {
         request.setEmail("EmailTeste@teste.com.br");
         request.setSenha("123456");
 
-        var response = service.AdicionarUsusario(request);
+        var response = service.Adicionar(request);
         System.out.println(response.getMensagem());
     }
 
-    private static void AdicionarAlbum(ServiceAlbum service) {
+    private static void AdicionarAlbum(ServiceAlbum albumService) {
         var request = new AdicionarAlbumRequest();
         System.out.println("Album criado");
 
@@ -114,11 +114,11 @@ public class Testes {
         request.setTitulo("Album de Teste");
         request.setFigurinhas(new ArrayList<>(Data.listaDeAlbunsOriginais.get(0).getNumeroDeFigurinhas()));
 
-        var response = service.AdicionarAlbum(request);
+        var response = albumService.Adicionar(request);
         System.out.println(response.getMensagem());
     }
 
-    private static void AdicionarAlbumOriginal(ServiceAlbumOriginal service) {
+    private static void AdicionarAlbumOriginal(ServiceAlbumOriginal albumOriginalService) {
         var request = new AdicionarAlbumOriginalRequest();
         System.out.println("AlbumOriginal criado");
 
@@ -126,7 +126,7 @@ public class Testes {
         request.setTitulo("AlbumOriginal de Teste");
         request.setNumeroDeFigurinhas(100);
 
-        var response = service.AdicionarAlbumOriginal(request);
+        var response = albumOriginalService.Adicionar(request);
         System.out.println(response.getMensagem());
     }
 

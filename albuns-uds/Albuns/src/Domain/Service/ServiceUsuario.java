@@ -8,6 +8,9 @@ package Domain.Service;
 import Data.Repository.UsuarioRepository;
 import Domain.Argument.Usuario.AdicionarUsuarioRequest;
 import Domain.Argument.Usuario.AdicionarUsuarioResponse;
+import Domain.Argument.Usuario.EditarUsuarioRequest;
+import Domain.Argument.Usuario.EditarUsuarioResponse;
+import Domain.Argument.Usuario.UsuarioResponse;
 import Domain.Entity.Usuario;
 import Domain.Interface.Repository.IRepositoryUsuario;
 import Domain.Interface.Service.IServiceUsuario;
@@ -25,7 +28,7 @@ public class ServiceUsuario implements IServiceUsuario {
     }
 
     @Override
-    public AdicionarUsuarioResponse AdicionarUsusario(AdicionarUsuarioRequest request) {
+    public AdicionarUsuarioResponse Adicionar(AdicionarUsuarioRequest request) {
         try {
             var usuario = new Usuario(request.getNome(), request.getEmail(), request.getSenha());
             
@@ -34,5 +37,20 @@ public class ServiceUsuario implements IServiceUsuario {
             System.err.println(e + "Toma no cu");
             return null;
         }
+    }
+
+    @Override
+    public EditarUsuarioResponse Editar(EditarUsuarioRequest request, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Remover(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public UsuarioResponse GetById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

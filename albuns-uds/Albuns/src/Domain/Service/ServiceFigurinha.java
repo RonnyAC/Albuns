@@ -8,6 +8,9 @@ package Domain.Service;
 import Data.Repository.FigurinhaRepository;
 import Domain.Argument.Figurinha.AdicionarFigurinhaRequest;
 import Domain.Argument.Figurinha.AdicionarFigurinhaResponse;
+import Domain.Argument.Figurinha.EditarFigurinhaRequest;
+import Domain.Argument.Figurinha.EditarFigurinhaResponse;
+import Domain.Argument.Figurinha.FigurinhaResponse;
 import Domain.Entity.Figurinha;
 import Domain.Interface.Repository.IRepositoryFigurinha;
 import Domain.Interface.Service.IServiceFigurinha;
@@ -25,7 +28,7 @@ public class ServiceFigurinha implements IServiceFigurinha {
     }
 
     @Override
-    public AdicionarFigurinhaResponse AdicionarAlbumOriginal(AdicionarFigurinhaRequest request) {
+    public AdicionarFigurinhaResponse Adicionar(AdicionarFigurinhaRequest request) {
         try {
             var figurinha = new Figurinha(request.getNumero(), request.getNome(), request.getDescricao(), request.getAlbumOriginal());
             return repositoryFigurinha.AdicionarFigurinha(figurinha);
@@ -33,5 +36,20 @@ public class ServiceFigurinha implements IServiceFigurinha {
             System.err.println(e);
             return null;
         }
+    }
+
+    @Override
+    public EditarFigurinhaResponse Editar(EditarFigurinhaRequest request, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Remover(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public FigurinhaResponse GetById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

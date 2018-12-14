@@ -8,6 +8,9 @@ package Domain.Service;
 import Data.Repository.ColecaoRepository;
 import Domain.Argument.Colecao.AdicionarColecaoRequest;
 import Domain.Argument.Colecao.AdicionarColecaoResponse;
+import Domain.Argument.Colecao.ColecaoResponse;
+import Domain.Argument.Colecao.EditarColecaoRequest;
+import Domain.Argument.Colecao.EditarColecaoResponse;
 import Domain.Entity.Colecao;
 import Domain.Interface.Repository.IRepositoryColecao;
 import Domain.Interface.Service.IServiceColecao;
@@ -25,7 +28,7 @@ public class ServiceColecao implements IServiceColecao {
     }
 
     @Override
-    public AdicionarColecaoResponse AdicionarAlbumOriginal(AdicionarColecaoRequest request) {
+    public AdicionarColecaoResponse Adicionar(AdicionarColecaoRequest request) {
         try {
             var colecao = new Colecao(request.getTitulo(), request.getSenha());
             return repositoryColecao.AdicionarColecao(colecao);
@@ -33,6 +36,21 @@ public class ServiceColecao implements IServiceColecao {
             System.err.println(e);
             return null;
         }
+    }
+
+    @Override
+    public EditarColecaoResponse Editar(EditarColecaoRequest request, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Remover(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ColecaoResponse GetById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

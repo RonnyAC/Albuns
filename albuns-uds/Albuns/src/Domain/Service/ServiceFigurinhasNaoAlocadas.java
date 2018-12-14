@@ -7,6 +7,9 @@ package Domain.Service;
 
 import Domain.Argument.FigurinhasNaoAlocadas.AdicionarFigurinhasNaoAlocadasRequest;
 import Domain.Argument.FigurinhasNaoAlocadas.AdicionarFigurinhasNaoAlocadasResponse;
+import Domain.Argument.FigurinhasNaoAlocadas.EditarFigurinhasNaoAlocadasRequest;
+import Domain.Argument.FigurinhasNaoAlocadas.EditarFigurinhasNaoAlocadasResponse;
+import Domain.Argument.FigurinhasNaoAlocadas.FigurinhasNaoAlocadasResponse;
 import Domain.Interface.Service.IServiceFigurinhasNaoAlocadas;
 
 /**
@@ -16,7 +19,22 @@ import Domain.Interface.Service.IServiceFigurinhasNaoAlocadas;
 public class ServiceFigurinhasNaoAlocadas implements IServiceFigurinhasNaoAlocadas{
 
     @Override
-    public AdicionarFigurinhasNaoAlocadasResponse AdicionarAlbumOriginal(AdicionarFigurinhasNaoAlocadasRequest request) {
+    public AdicionarFigurinhasNaoAlocadasResponse Adicionar(AdicionarFigurinhasNaoAlocadasRequest request) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public EditarFigurinhasNaoAlocadasResponse Editar(EditarFigurinhasNaoAlocadasRequest request, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Remover(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public FigurinhasNaoAlocadasResponse GetById(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

@@ -7,6 +7,7 @@ package View;
 
 import Comandos.EnumComandosBasicos;
 import Comandos.EnumObjetos;
+import Controler.AlbumController;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,11 @@ public class TelaPrincipal {
 
     private EnumComandosBasicos comandosBasicos;
     private EnumObjetos objetos;
+    private final AlbumController albumController;
+
+    public TelaPrincipal() {
+        albumController = new AlbumController();
+    }
 
     public void iniciarPrograma() throws Exception {
         Scanner scanner = new Scanner(System.in);
@@ -27,36 +33,43 @@ public class TelaPrincipal {
         objetos = EnumObjetos.DEFAULT;
 
         while (comandosBasicos != EnumComandosBasicos.SAIR) {
-            command = (scanner.next());
-            String[] entireCommand = command.split("//s");
-            comandosBasicos = commandController.BasicCommandCheck(entireCommand[0]);
-            switch (comandosBasicos) {
-                case SAIR:
-                    System.out.println("O programa será encerrado!");
-                    scanner.next();
-                    break;
-                case NOVO:
-                    System.out.println("Novo o que?");
-                    objetos = commandController.ObjectCommandCheck(entireCommand[1]);
-                    switch (objetos) {
-                        case ALBUM:
-                            System.out.println("Novo Album criado");
-                            break;
-                        case COLECAO:
-                            System.out.println("Nova Colecao criada");
-                            break;
-                        case FIGURINHA:
-                            System.out.println("Nova Figurinha criada");
-                            break;
-                        case USUARIO:
-                            System.out.println("Novo Usuario criado");
-                            break;
-                        default:
-                            System.out.println("Comando invalido");
-                    }
-                    break;
-                default:
-                    System.out.println("Comando invalido");
+            command = (scanner.nextLine());
+            String[] entireCommand = command.split(" ");
+
+            if (entireCommand.length >= 1) {
+                comandosBasicos = commandController.BasicCommandCheck(entireCommand[0]);
+                switch (comandosBasicos) {
+                    case SAIR:
+                        System.out.println("O programa será encerrado!");
+                        scanner.next();
+                        break;
+                    case NOVO:
+                    case NOVA:
+                        if (entireCommand.length >= 2) {
+                            objetos = commandController.ObjectCommandCheck(entireCommand[1]);
+                            switch (objetos) {
+                                case ALBUM:
+                                    var request = commandController.RequestAlbumCommandCheck(entireCommand);
+                                    var response = albumController.Adicionar(request);
+                                    System.out.println(response.getId() + " " + response.getMensagem());
+                                    break;
+                                case COLECAO:
+                                    System.out.println("Nao Implementado");
+                                    break;
+                                case FIGURINHA:
+                                    System.out.println("Nao Implementado");
+                                    break;
+                                case USUARIO:
+                                    System.out.println("Nao Implementado");
+                                    break;
+                                default:
+                                    System.out.println("Nao Implementado");
+                            }
+                        }
+                        break;
+                    default:
+                        System.out.println("Comando invalido");
+                }
             }
         }
     }

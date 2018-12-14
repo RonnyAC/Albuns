@@ -12,6 +12,7 @@ package Comandos;
 public enum EnumComandosBasicos {
     DEFAULT("Comando padrao para iniciar o sistema"),
     NOVO("Comando para inserir um novo objeto no sistema"),
+    NOVA("Comando para inserir um novo objeto no sistema"),
     SAIR("Comando para sair do sistema");
     
     private final String descricao;
